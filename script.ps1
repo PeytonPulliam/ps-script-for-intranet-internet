@@ -1,3 +1,6 @@
+#Install.
+##################################################
+
 # URL and Destination
 $url = "https://install.speedtest.net/app/cli/ookla-speedtest-1.2.0-win64.zip"
 $dest = "C:\Users\Peyton Pulliam\Downloads"
@@ -10,3 +13,6 @@ $secPassword = ConvertTo-SecureString $password -AsPlainText -Force
 $credObject = New-Object System.Management.Automation.PSCredential ($username, $secPassword)
 # Download file
 Invoke-WebRequest -Uri $url -OutFile $dest -Credential $credObject
+
+#Schedule repeated tasks.
+##################################################
