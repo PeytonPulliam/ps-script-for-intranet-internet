@@ -1,26 +1,4 @@
-	<#
-	.SYNOPSIS
-	Schedules a program to run automatically every 30 minutes.
-	 
-	.DESCRIPTION
-	This function uses the Windows Task Scheduler to create a task that runs a specified program at a defined interval.
-	 
-	.PARAMETER programPath
-	The full path to the executable or script that needs to be scheduled.
-	 
-	.PARAMETER taskName
-	The name of the scheduled task.
-	 
-	.PARAMETER taskDescription
-	A description for the scheduled task.
-	 
-	.EXAMPLE
-	Schedule-Program "C:\Path\To\YourProgram.exe" "MyScheduledTask" "This task runs my program every 30 minutes."
-	Creates a scheduled task named "MyScheduledTask" that runs "YourProgram.exe" every 30 minutes.
-	 
-	.NOTES
-	Requires administrative privileges to create a scheduled task.
-	#>
+
 	function SchedulizerTask {
 	    param (
 	        [string]$programPath,
@@ -52,5 +30,4 @@
 	    Write-Output "Scheduled task '$taskName' has been created to run '$programPath' every 30 minutes."
 	}
 	 
-	# Example usage of the Schedule-Program function
 	# Schedule-Program "C:\Path\To\YourProgram.exe" "MyScheduledTask" "This task runs my program every 30 minutes."
