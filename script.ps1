@@ -14,7 +14,7 @@ $serviceAccountFile = "C:\path\to\your\service-account-file.json"
 $spreadsheetId = "your-spreadsheet-id"  # Replace with your Spreadsheet ID
 $range = "Sheet1!A:C"  # Replace with your desired sheet and range
 
-# Load the Google credentials
+# It loads the Google Credentials
 $credentials = [Google.Apis.Auth.OAuth2.GoogleCredential]::FromFile($serviceAccountFile).CreateScoped("https://www.googleapis.com/auth/spreadsheets")
 
 # Initialize the Sheets API service
